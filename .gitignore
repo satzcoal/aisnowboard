@@ -16,4 +16,19 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+Gemfile.lock
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+config/database.yml
+config/secrets.yml
 .idea/
+.DS_Store
+config/initializers/zombie.rb
+.tags
+.tags_sorted_by_file
+config/initializers/zombie_local.rb
+dump.rdb
+.tags1
+tags
+config/deploy.rb
