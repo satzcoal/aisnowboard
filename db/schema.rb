@@ -11,6 +11,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160622064212) do
+
+  create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string   "name"
+    t.integer  "country_id"
+    t.boolean  "is_deleted", default: false
+    t.integer  "ori_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string   "name"
+    t.integer  "level"
+    t.integer  "main_category_id"
+    t.boolean  "is_deleted",       default: false
+    t.integer  "ori_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
+  create_table "countries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string   "name"
+    t.decimal  "price",       precision: 10, scale: 2
+    t.integer  "year",                                 default: 0
+    t.integer  "category_id"
+    t.integer  "brand_id"
+    t.string   "style"
+    t.string   "level"
+    t.string   "width"
+    t.boolean  "is_valid",                             default: true
+    t.boolean  "is_deleted",                           default: false
+    t.integer  "ori_id"
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
+  end
+
+  create_table "rates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.string   "name"
+    t.integer  "category_id"
+    t.integer  "max_num",     default: 5
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
 end
