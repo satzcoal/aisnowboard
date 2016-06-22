@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  SoftMethodHelper
+  include SoftMethodHelper
 
   validates_presence_of :name, :level, :is_deleted, :ori_id
 
