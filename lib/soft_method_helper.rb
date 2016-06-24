@@ -36,7 +36,7 @@ module SoftMethodHelper
       old.created_at = self.created_at
       old.is_deleted = true
       old.updated_at = self.updated_at
-      
+
       old.save(:validate => false)
       self.update_attribute(:is_deleted, true)
     end

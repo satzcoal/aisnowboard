@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622064212) do
+ActiveRecord::Schema.define(version: 20160623071921) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string   "name"
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(version: 20160622064212) do
 
   create_table "countries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pictures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+    t.integer  "product_id"
+    t.integer  "s_index"
+    t.string   "url"
+    t.boolean  "is_valid"
+    t.boolean  "is_deleted"
+    t.integer  "ori_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

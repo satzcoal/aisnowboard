@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 1
+  s_index: 1
+  url: MyString
+  is_valid: false
+  is_deleted: false
+  ori_id: 1
+
+two:
+  product_id: 1
+  s_index: 1
+  url: MyString
+  is_valid: false
+  is_deleted: false
+  ori_id: 1
