@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160623071921) do
+ActiveRecord::Schema.define(version: 20160707040518) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string   "name"
@@ -30,12 +30,14 @@ ActiveRecord::Schema.define(version: 20160623071921) do
     t.integer  "ori_id"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+    t.string   "ident_name"
   end
 
   create_table "countries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "ident_name"
   end
 
   create_table "pictures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
@@ -71,6 +73,7 @@ ActiveRecord::Schema.define(version: 20160623071921) do
     t.integer  "max_num",     default: 5
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.string   "ident_name"
   end
 
 end
