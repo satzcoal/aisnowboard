@@ -29,6 +29,5 @@ module Aisnowboard
     config.api_only = true
 
     config.time_zone = 'Beijing'
-    config.active_record.default_timezone = :local
   end
 end
