@@ -12,6 +12,7 @@ class CategoriesController < ApplicationController
     category.rates.each do |rate|
       ret[:rates] << rate.name
     end
+    render json: ret
   end
 
 # GET /categories
