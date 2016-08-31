@@ -7,6 +7,9 @@ gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
 gem 'slim'
 
+gem 'activeadmin', '~> 1.0.0.pre4'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 gem 'devise'
 
 # Use Uglifier as compressor for JavaScript assets
