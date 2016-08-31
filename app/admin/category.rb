@@ -1,6 +1,14 @@
 ActiveAdmin.register Category do
   permit_params :name, :level, :main_category_id, :ident_name
 
+  menu parent: 'Contents'
+
+  sidebar "Products", only: [:show, :edit] do
+    ul do
+      li link_to "Products", admin_category_products_path(resource)
+    end
+  end
+
   index do
     selectable_column
     id_column
@@ -18,7 +26,7 @@ ActiveAdmin.register Category do
   filter :created_at
 
   form do |f|
-    f.inputs "Admin Details" do
+    f.inputs "Category Details" do
       f.input :name
       f.input :level
       f.input :main_category_id

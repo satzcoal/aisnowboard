@@ -1,6 +1,8 @@
 ActiveAdmin.register Brand do
   permit_params :name, :country_id
 
+  menu parent: 'Contents'
+
   index do
     selectable_column
     id_column
