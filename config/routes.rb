@@ -6,10 +6,14 @@ Rails.application.routes.draw do
   resources :rates
   resources :countries
   resources :brands
-  resources :categories do
+  resources :categories
+  resources :products
+
+  resources :page, :only => [] do
     collection do
-      get :nav_bar_index
+      get :top_nav
+      get :filter_form
     end
   end
-  resources :products
+
 end
