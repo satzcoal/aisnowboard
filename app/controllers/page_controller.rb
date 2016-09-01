@@ -1,6 +1,6 @@
 class PageController < ApplicationController
   def top_nav
-    @cates = Category.snowboard_categories
+    @cates = Category.root_categories
     render formats: :json
   end
 

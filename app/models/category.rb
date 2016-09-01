@@ -9,7 +9,6 @@ class Category < ApplicationRecord
   has_many :rates
 
   scope :root_categories, -> { where(:main_category_id => nil) }
-  scope :snowboard_categories, -> { where(:main_category_id => 1) }
 
   def format_json(type)
     case type
