@@ -21,6 +21,7 @@ class Category < ApplicationRecord
         {
             :name => self.name,
             :url => self.url,
+            :ident_name => self.ident_name,
             :sub_categories => sub_json
         }
     end
