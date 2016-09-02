@@ -1,7 +1,7 @@
 class PageController < ApplicationController
   def top_nav
     @cates = Category.root_categories
-    render formats: :json
+    render json: {:categories => @cates.map { |cate| cate.format_json('top_nav') }}
   end
 
   def filter_form
