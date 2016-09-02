@@ -33,3 +33,4 @@ dump.rdb
 .tags1
 tags
 config/deploy.rb
+public/assets/
