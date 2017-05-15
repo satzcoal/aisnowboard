@@ -22,7 +22,6 @@ config/environments/*.local.yml
 config/database.yml
 config/secrets.yml
 config/deploy.rb
-config/puma.rb
 .idea/
 .DS_Store
 config/initializers/zombie.rb
@@ -33,4 +32,3 @@ dump.rdb
 .tags1
 tags
 config/deploy.rb
-public/assets/

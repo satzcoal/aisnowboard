@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
   # GET /products
   def index
     @products = Product.all
-    @products = filter_with_params(@products, 'category_id', 'brand_id')
 
     render json: @products
   end
@@ -40,13 +39,13 @@ class ProductsController < ApplicationController
   end
 
   private
-  # Use callbacks to share common setup or constraints between actions.
-  def set_product
-    @product = Product.find(params[:id])
-  end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_product
+      @product = Product.find(params[:id])
+    end
 
-  # Only allow a trusted parameter "white list" through.
-  def product_params
-    params.require(:product).permit(:name, :price, :year, :category_id, :brand_id, :style, :level, :width)
-  end
+    # Only allow a trusted parameter "white list" through.
+    def product_params
+      params.require(:product).permit(:name, :price, :year, :category_id, :brand_id, :style, :level, :width)
+    end
 end
